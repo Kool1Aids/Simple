@@ -123,3 +123,24 @@
         }
       }
 
+      .continueBtn {
+        margin-left: 60%;
+        padding-top: 15px;
+        text-align: center;
+        font-size: 50px;
+      }
+
+      .continueBtn:hover {
+        animation-name: bob;
+        animation-duration: 1s;
+        animation-iteration-count: forwards;
+      }
+
+      @keyframes bob {
+        90% {
+          border: 1px solid white;
+        } 
+        100% {
+          border: 1px solid white;
+        }
+      }
