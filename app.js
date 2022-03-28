@@ -11,13 +11,3 @@ function showPage() {
 }
 
 
-function myFunction2() {
-    if (document.getElementById('loadingScreen').style.display === 'block') {
-        myVara = setTimeout(showLoad, 1000)
-    }
-}
-
-function showLoad() {
-    document.getElementById('button').style.display = 'flex';
-    document.getElementById('loadingScreen').style.display = 'none';
-}
