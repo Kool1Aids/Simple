@@ -1,15 +1,86 @@
 * {
-    background-color: #333333;
+    background-color: #B39A6D;
 }
 
-div {
-    margin-left: 36%;
-    margin-top: 400px;
+#button {
+    margin-left: 350px;
+    margin-top: 150px;
 }
 
-button {
-    color: white;
-    height: 100px;
-    width: 400px;
-    border: 5px groove whitesmoke;
+.button {
+    color: whitesmoke;
+    height: 500px;
+    width: 800px;
+    font-size: 100px;
+    border: none;
+    -webkit-transform: scale(1, 1);
+     transform: scale(1, 1);
 }
+
+.button:focus {
+    -webkit-animation: beat 1s ease-in-out backwards;
+            animation: beat 1s ease-in-out backwards;
+  }
+  .button:active {
+    -webkit-animation: none;
+            animation: none;
+  }
+
+.button:hover {
+    animation-name: buttonHover;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes buttonHover {
+    90% {
+        border-radius: 50%;
+        border: 10px solid white;
+        color: black;
+    }
+
+    100% {
+        border-radius: 50%;
+        border: 10px solid white;
+        color: black;
+    }
+}
+
+@keyframes beat {
+    0% {
+      -webkit-transform: scale(1, 1);
+              transform: scale(1, 1);
+    }
+    100% {
+      -webkit-transform: scale(0.5,0.5);
+              transform: scale(0.5, 0.5);
+    }
+  }
+
+
+
+#loadingScreen {
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+        width: 120px;
+        height: 120px;
+        margin: -76px 0 0 -76px;
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #3498db;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+      }
+
+      @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
