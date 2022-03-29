@@ -203,6 +203,55 @@
         }
       }
 
-      #catus {
-        width: 50px;
+      #obj {
+        background-color: black;
+        width: 20px;
+        height: 30px;
+        position: relative;
+        top: 320px;
+        left: 750px;
+        animation: 1s block infinite linear;
+      }
+
+      @keyframes block {
+        0% {
+          left: 750px;
+        }
+        100% {
+          left: -100px;
+        }
+      }
+
+      #score {
+        position: relative;
+        left: 700px;
+        top: -60px;
+        height: 60px;
+        width: 100px;
+        border: 1px solid black;
+        background-color: white;
+        overflow: hidden;
+      }
+
+      #retry {
+        text-align: center;
+        display: none;
+        margin: auto;
+        height: 500px;
+        width: 375px;
+        font-size: 50px;
+        color: #f3f3f3;
+      }
+      
+      #yes {
+        font-size: 50px;
+        position: relative;
+        top: 50px;
+        color: green;
+      }
+      #no {
+        font-size: 50px;
+        position: relative;
+        top: 50px;
+        color: red;
       }
