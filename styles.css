@@ -105,42 +105,104 @@
         vertical-align: bottom;
         animation: loadingText 1s infinite .3s;
         animation-fill-mode: forwards;
-        width: 1.25em
+        width: 5.25em
       }
 
       @keyframes loadingText {
-        25% {
-          content: "";
+        0% {
+          content: "loading...";
+        }
+        12% {
+          content: "loading";
         } 
-        50% {
-          content: ".";
+        24% {
+          content: "loading.";
         } 
-        75% {
-          content: "..";
+        36% {
+          content: "loading..";
+        }
+        48% {
+          content: "loading...";
+        }
+        60% {
+          content: "loading";
+        }
+        72% {
+          content: "loading";
+        } 
+        84% {
+          content: "loading.";
+        } 
+        96% {
+          content: "loading..";
         }
         100% {
-          content: "...";
-        }
+          content: "loading...";
       }
+    }
 
-      .continueBtn {
+      #continueBtn {
         margin-left: 60%;
         padding-top: 15px;
         text-align: center;
         font-size: 50px;
+        border: none;
+        display: none;
       }
 
-      .continueBtn:hover {
+      #continueBtn:hover {
         animation-name: bob;
         animation-duration: 1s;
-        animation-iteration-count: forwards;
+        animation-fill-mode: forwards;
       }
 
       @keyframes bob {
         90% {
-          border: 1px solid white;
+          color: #f1da36;
         } 
         100% {
-          border: 1px solid white;
+          color: #f1da36;
         }
+      }
+
+      #game {
+        background-color: #87ceeb;
+        display: none;
+        height: 400px;
+        width: 800px;
+        margin: 20px auto;
+      }
+
+      #player {
+        height: 50px;
+        width: 50px;
+        background-color: #FFE5B4;
+        position: relative;
+        top: 350px;
+      }
+
+      .jump {
+        animation: jump .3s linear;
+      }
+
+      @keyframes jump {
+        0% {
+          top: 350px;
+        }
+        30% {
+          top: 300px;
+        }
+        50% {
+          top: 270px;
+        }
+        80% {
+          top: 300px
+        }
+        100% {
+          top: 350px;
+        }
+      }
+
+      #catus {
+        width: 50px;
       }
