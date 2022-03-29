@@ -77,7 +77,7 @@ let isAlive = setInterval(function() {
 
 function points() {
     var score = parseInt(document.getElementById('score').innerHTML);
-    score++;
+    score += 1;
     document.getElementById('score').innerHTML = score;
     document.getElementById('points').innerHTML = score;
 }
